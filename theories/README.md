@@ -57,6 +57,8 @@ Data Partitioning
 
 ## Methods
 
+![data-sharding](./data-sharding.webp)
+
 ### 1. Horizontal (data sharding)
 Putting different rows into different tables. For example, rows with ZIP code less than 10000 go in table A and ZIP code greater than 10000 go in table B.
 - cons - when the partitioning scheme isn't chosen carefully, it might result in unbalanced servers. In the ZIP code example, some areas with high ZIP code density might lead to uneven distributed data.
@@ -69,20 +71,14 @@ Sorting tables by servers. For example, if we have an Instagram to build, we can
 ### 3. Directory-based
 A lookup service that decouples DB relations. To find out a particular DB entity, we first lookup this service to get a key to a particular DB server, and moving forward to that DB server to get the information we need.
 
+![directory-based](./directory-based.jpg)
+
 ## Criteria
-### 1. Key/Hash-based
-Whenever we want to insert a record, hash the record ID and assign it to a corresponding server.
 
-### 2. List
-Whenever we want to insert a record, find out its value and assign it to a corresponding server.
-
-For example, we can assign records of users living in countries like Japan, Taiwan and South Korea to a partition specifically for Eastern Asia.
-
-### 3. Round-Robin
-Assign the record to servers in turn.
-
-### 4. Composite
-Combining any partitioning method we mentioned before.
+1. Key/Hash-based - whenever we want to insert a record, hash the record ID and assign it to a corresponding server.
+2. List - whenever we want to insert a record, find out its value and assign it to a corresponding server. For example, we can assign records of users living in countries like Japan, Taiwan and South Korea to a partition specifically for Eastern Asia.
+3. Round-Robin - assign the record to servers in turn.
+4. Composite - combining any partitioning method we mentioned before.
 
 ## Challenges & Problems
 
