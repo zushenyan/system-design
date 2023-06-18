@@ -80,6 +80,12 @@ We have the following ways to combat the issue:
 
 # Message/Task Queue
 
+![mq](./mq.png)
+
+We can queue up computation heavy tasks and let works pick them up and process in the background.
+
+- message queues - for job notification. Common message queues are Redis, RabbitMQ.
+- task queues - job scheduling. Common task queues are Celery.
 
 # Database
 
