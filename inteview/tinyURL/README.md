@@ -76,3 +76,10 @@ We could use NoSQL due to following observations
 
 # Step 6 - Detailed Design
 
+1. How to generate keys?
+   - Key Generation Service (KGS) 
+2. How to partition data?
+   - Range based partition - partition by the first letter of hash key. It might end up with a specific letter with more occurrences, causing uneven traffic.
+   - Hash based partition - determine where to store based on the the hash of an object. We should utilize `consistent hashing` to workaround **the fixed number partition constraint**.
+3. Cache eviction policy?
+   - Least recently used (LRU).
