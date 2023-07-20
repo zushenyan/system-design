@@ -7,7 +7,7 @@ A capability to continue to grow when facing increasing demand.
 - vertical scaling - upgrading hardwares (CPU/RAM/storage... etc.) for a single machine.
 - horizontal scaling - adding more machines to a distributed system.
 
-## Reliabilitdy
+## Reliability
 A capability that a service can keep running even though several of its machines or hardware components fail.
 
 ## Availability
