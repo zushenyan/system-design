@@ -26,7 +26,7 @@ CAP Theorem
 
 ![cap](https://upload.wikimedia.org/wikipedia/commons/c/c6/CAP_Theorem_Venn_Diagram.png)
 
-Generally, a distributed system can only cover two out of three aspects, which are `CA`, `CP` and `AP`. As network parition should be always tolerated, it leaves only `CP` or `AP`.
+Generally, a distributed system can only cover two out of three aspects, which are `CA`, `CP` and `AP`. As network parition should always be tolerated, it leaves only `CP` or `AP`.
 
 ## Consistency
 All nodes have an up-to-date copy of data. Users should be able to see the same data.
